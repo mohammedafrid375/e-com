@@ -1,0 +1,243 @@
+
+body{
+    margin-top: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: wheat;
+}
+
+.hero-cont{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    width: 100%;  
+    height: 10vh;
+    background-color: rgb(223, 172, 107);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    
+}
+.nav ol{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav ol li{
+    background-color: rgb(171, 98, 3);
+    border-radius: 10px;
+    transition: all .1s ease;
+    padding: 10px 40px;
+}
+.nav ol a{
+    text-decoration: none;
+    color: white;
+}
+.nav ol li:hover{
+    border: 1px solid rgb(171, 98, 3);
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 5px 5px 8px black;
+}
+.title-sec{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.hero-cont::before{
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    content: "";
+    width: 10px;
+    height: 200px;
+    background-color: brown;
+    z-index: 2;
+}
+.hero-cont:hover::before{
+
+    animation:2s 1 cross;
+    animation-delay: 2s;
+}
+@keyframes cross {
+    
+    0%{
+        transform: translate(0px,0px);
+
+    }
+    30%{
+        transform: translate(650px,0px);
+        
+    }
+    80%{
+        transform: translate(-650px,0px);
+    }
+    100%{
+        width: 10px;
+        
+    }
+}
+
+
+
+
+
+.cont{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.cont h1{
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(171, 98, 3);
+    margin: 0px;
+}
+.cont p{
+    color:black;
+    font-size: 1rem;
+    align-items:center ;
+    text-align: center;
+    margin-top: 5px;
+}
+.toppick{
+    height: 400px;
+    width: 20%;
+    border-radius: 20px 20px 40px 50px;
+    background-image: url(./img/slide-2.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 40px black inset;
+    transition: all .5s ease;
+}
+.toppick:hover{
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 3px 3px 5px black inset;
+}
+.card-title-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+.card-title-center h1{
+    margin: 0px;
+}
+.card-title-center p{
+    margin: 0px;
+}
+.card-cont{
+    margin: 0px 40px;
+    padding: 5px;
+}
+
+.card-grid{
+    margin: 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+    margin: 10px 20px;
+    text-align: justify;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px black inset;
+    
+
+    background-image: url(./img/img2.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    transition: all .5s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 5px black inset;
+}
+.card::before{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 1px;
+    border-radius: 5%;
+    content: "";
+    backdrop-filter: blur(3px);
+    z-index: -1;
+    
+    
+}
+.card:hover::before{
+    
+    animation:2s 1 card-cont;
+    animation-fill-mode: forwards
+}
+@keyframes card-cont {
+    0%{
+        width:100%;
+    }
+    33%{
+        width: 100%;
+        height: 140px;
+    }
+    100%{
+        width: 100%;
+        height: 140px;
+        background-color: rgba(18, 14, 7, 0.384);
+        
+    }
+
+}
+
+
+.btn{
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 20px;
+
+    font-size: 15px;
+    transform: .4s;
+}
+.btn:hover{
+    box-shadow: 1px 1px 2.5px black;
+
+
+}
+
+footer{
+    height: 200px;
+    width: 100%;
+}
+.head{
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+}
